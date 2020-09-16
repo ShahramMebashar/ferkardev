@@ -40,3 +40,18 @@ ul.list-primary {
 	width: 1em; 
 	margin-right: -1em; 
   }
+
+  .course-vt .img {
+	  height: 250px;
+  }
+
+  [dir='rtl'] .dropdown-menu {
+	  text-align: right;
+	  float: right;
+	  right: 0;
+	  left: auto;
+  }
+
+.nav-link.active {
+	  background: $primary !important;
+}
