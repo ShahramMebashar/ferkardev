@@ -1,0 +1,42 @@
+@import 'vendor/bootstrap/bootstrap';
+@import 'vendor/bootstrap/variables';
+@import './theme';
+@import './base/fonts';
+
+html,
+body {
+  font-family: "Empire", Arial, Helvetica, sans-serif;
+}
+
+.home-slider {
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+.ftco-navbar-light .container {
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+}
+
+.btn, .form-control{
+	border-radius: 8px !important;
+}
+.form-control {
+	border-color: transparent;
+	font-size: 14px;
+}
+
+ul.list-primary {
+	list-style: none; 
+	margin: 0;
+	padding-right: 1em;
+  }
+  
+  ul.list-primary li::before {
+	content: "\2022";
+	color: $primary; 
+	font-weight: bold; 
+	display: inline-block;
+	width: 1em; 
+	margin-right: -1em; 
+  }
