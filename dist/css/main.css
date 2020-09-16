@@ -11732,17 +11732,6 @@ body {
   font-family: "Empire", Arial, Helvetica, sans-serif;
 }
 
-.home-slider {
-  position: relative;
-  display: block;
-  overflow: hidden;
-}
-
-.ftco-navbar-light .container {
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-}
-
 .btn, .form-control {
   border-radius: 8px !important;
 }
