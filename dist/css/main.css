@@ -11781,3 +11781,7 @@ ul.list-primary li::before {
 .nav-link.active {
   background: #02B6BF !important;
 }
+
+[dir=rtl] .ftco-footer-social li {
+  margin: 0 0 0 10px;
+}
