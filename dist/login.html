@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Ferkar website</title>
-<link href="/css/vendors.css?91aa555bc8933bc0f044" rel="stylesheet"><link href="/css/main.css?91aa555bc8933bc0f044" rel="stylesheet"><link href="/css/main.rtl.css?91aa555bc8933bc0f044" rel="stylesheet"></head>
+<link href="/css/vendors.css?5821c1edd3dd8c01e05c" rel="stylesheet"><link href="/css/main.css?5821c1edd3dd8c01e05c" rel="stylesheet"><link href="/css/main.rtl.css?5821c1edd3dd8c01e05c" rel="stylesheet"></head>
 <body>
     
       <div class="bg-top navbar-light">
@@ -44,11 +44,11 @@
       </div>
     </form>
     <div class="collapse navbar-collapse" id="ftco-nav">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active"><a href="index.html" class="nav-link">سەرەتا</a></li>
-        <li class="nav-item"><a href="courses.html" class="nav-link">کۆرسەکان</a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link">دەربارە</a></li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">پەیوەندی</a></li>
+      <ul class="navbar-nav mr-auto main-nav">
+        <li class="nav-item active" data-path="/"><a href="index.html" class="nav-link">سەرەتا</a></li>
+        <li class="nav-item" data-path="/courses"><a href="courses.html" class="nav-link">کۆرسەکان</a></li>
+        <li class="nav-item" data-path="/about"><a href="about.html" class="nav-link">دەربارە</a></li>
+        <li class="nav-item" data-path="/contact"><a href="contact.html" class="nav-link">پەیوەندی</a></li>
       </ul>
     </div>
   </div>
@@ -171,5 +171,17 @@
     
   
     
-<script type="text/javascript" src="/js/main.js?91aa555bc8933bc0f044"></script></body>
+    <script>
+      const path = window.location.pathname;
+      const mainNav = document.querySelector('.main-nav');
+      const navItems = mainNav.querySelectorAll('.nav-item');
+      [].slice.call(navItems).forEach(function (item) {
+        const itemPath = item.getAttribute('data-path');
+        item.className = item.className.replace('active', ' ');
+        if(path === itemPath) {
+          item.className = item.className + ' active';
+        }
+      });
+    </script>
+<script type="text/javascript" src="/js/main.js?5821c1edd3dd8c01e05c"></script></body>
 </html>

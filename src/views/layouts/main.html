@@ -89,5 +89,17 @@
     <script src="js/vendors/google-map.js"></script> -->
 
     <block name="scripts"></block>
+    <script>
+      const path = window.location.pathname;
+      const mainNav = document.querySelector('.main-nav');
+      const navItems = mainNav.querySelectorAll('.nav-item');
+      [].slice.call(navItems).forEach(function (item) {
+        const itemPath = item.getAttribute('data-path');
+        item.className = item.className.replace('active', ' ');
+        if(path === itemPath) {
+          item.className = item.className + ' active';
+        }
+      });
+    </script>
 </body>
 </html>
